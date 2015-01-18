@@ -1,0 +1,18 @@
+html
+  head
+    title DHIS-Metadata
+    script(type='text/javascript', src='/javascripts/jquery-2.0.3.min.js')
+    script(type='text/javascript', src='/javascripts/script.js')
+  body
+    select#dataSets
+      option(value="" selected) select a dataset
+      -for(var dataset in datasets)
+        option(value="#{dataset}") #{datasets[dataset]}
+    | &#x9;
+
+    select#dataElements
+    | &#x9;
+
+    table#categoryOptions
+    | &#x9;
+
