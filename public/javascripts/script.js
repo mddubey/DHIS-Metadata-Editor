@@ -19,14 +19,13 @@ var getDataElements = function() {
 
 var showCategories = function(data) {
 	var jsonData = JSON.parse(data);
-	console.log(jsonData);
-	// var options = '<option value=""> select a dataElement </option>';
-	// jQuery.each(jsonData,function(key,value){
-	// 	var option = '<option value="KEY"> VALUE </option>';
-	// 	option = option.replace('KEY',key).replace('VALUE',value);
-	// 	options += option;
-	// });
-	// jQuery('#dataElements').html(options);
+	var tbody = '<tr><th>UID</th><th>NAME</th></tr>';
+	jQuery.each(jsonData,function(index,category){
+		var trHtml = '<tr><td>UID</td><td>NAME</td></tr>';
+		trHtml = trHtml.replace('UID',category.categoryOptionCombo).replace('NAME',category.categoryOptionName);
+		tbody += trHtml;
+	});
+	jQuery('#categoryOptions').html(tbody);
 };
 
 var getCategories = function() {
