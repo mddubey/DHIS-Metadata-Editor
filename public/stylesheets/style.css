@@ -8,3 +8,7 @@ td, th{
 	text-align: center;
 	white-space: nowrap;
 }
+
+select{
+	font-size: 120%;
+}

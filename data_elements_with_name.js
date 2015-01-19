@@ -4,7 +4,7 @@ var _ = require('underscore')
 
 var host = '192.168.33.20';
 var port = 8080;
-var dataSetUuid = 'iUz0yoVeeiZ';
+var dataSetUuid = process.argv[2];
 var pathToDatasetFolder = './jsons/UUID';
 pathToDatasetFolder = pathToDatasetFolder.replace('UUID', dataSetUuid);
 fs.existsSync(pathToDatasetFolder) || fs.mkdirSync(pathToDatasetFolder);
